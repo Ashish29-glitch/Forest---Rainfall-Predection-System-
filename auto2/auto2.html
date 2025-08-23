@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Prediction Platform - Complete Pipeline</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 Complete ML Pipeline</h1>
+            <p>Upload → Auto Train → Predict in One Place</p>
+        </div>
+        
+        <!-- Step 1: Upload Section -->
+        <div class="section" id="uploadSection">
+            <h2 class="section-title">📊 Step 1: Upload Your Dataset</h2>
+            
+            <div class="upload-area" id="uploadArea">
+                <span class="upload-icon">📁</span>
+                <div class="upload-text">Drag & Drop your CSV file here</div>
+                <div class="upload-subtext">or click to browse files</div>
+                <input type="file" id="fileInput" accept=".csv">
+            </div>
+            
+            <div id="fileInfo" class="file-info"></div>
+            <div id="dataPreview" class="data-preview"></div>
+        </div>
+        
+        <!-- Step 2: Processing Section -->
+        <div class="section processing-section" id="processingSection">
+            <h2 class="section-title">⚙️ Step 2: Automatic Model Training</h2>
+            
+            <div id="step1" class="pipeline-step step-pending">
+                <div class="step-icon">📊</div>
+                <div class="step-content">
+                    <div class="step-title">Data Loading & Validation</div>
+                </div>
+                <div class="step-status">Pending</div>
+            </div>
+            
+            <div id="step2" class="pipeline-step step-pending">
+                <div class="step-icon">🧹</div>
+                <div class="step-content">
+                    <div class="step-title">Data Cleaning & Preprocessing</div>
+                </div>
+                <div class="step-status">Pending</div>
+            </div>
+            
+            <div id="step3" class="pipeline-step step-pending">
+                <div class="step-icon">✂️</div>
+                <div class="step-content">
+                    <div class="step-title">Train/Test Split (70/30)</div>
+                </div>
+                <div class="step-status">Pending</div>
+            </div>
+            
+            <div id="step4" class="pipeline-step step-pending">
+                <div class="step-icon">🤖</div>
+                <div class="step-content">
+                    <div class="step-title">XGBoost Model Training</div>
+                </div>
+                <div class="step-status">Pending</div>
+            </div>
+            
+            <div id="step5" class="pipeline-step step-pending">
+                <div class="step-icon">📈</div>
+                <div class="step-content">
+                    <div class="step-title">Model Validation & Testing</div>
+                </div>
+                <div class="step-status">Pending</div>
+            </div>
+            
+            <div class="model-results" id="modelResults">
+                <h3 style="text-align: center; margin-bottom: 20px;">🎉 Training Complete!</h3>
+                <div class="results-grid" id="resultsGrid"></div>
+            </div>
+        </div>
+        
+        <!-- Step 3: Prediction Section -->
+        <div class="section prediction-section" id="predictionSection">
+            <h2 class="section-title">🎯 Step 3: Make Predictions</h2>
+            
+            <div id="modelInfo" style="background: linear-gradient(45deg, #74b9ff, #0984e3); color: white; padding: 20px; border-radius: 15px; margin-bottom: 20px; display: none;">
+                <h3>✅ Model Ready for Predictions</h3>
+                <div id="modelDetails"></div>
+            </div>
+            
+            <div id="inputForm" class="form-grid"></div>
+            
+            <button id="predictBtn" class="predict-btn" onclick="makePrediction()">
+                🔮 Get Prediction
+            </button>
+            
+            <div id="predictionResult" class="prediction-result"></div>
+        </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="auto.js"></script>
+   
+</body>
+</html>

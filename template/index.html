@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOREST</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    
+  </head>
+  <body>
+
+    <section>
+      <input type="checkbox" id="check">
+      <header>
+        </div>
+        <h2><a href="#" class="logo">FOREST</a></h2>
+        <div class="navigation">
+          <a href="#">Home</a>
+          <a href="#about">About FOREST</a>
+          <a href="#dashboard">Dashboard</a>
+          <a href="#info">Own Prediction</a>
+          <a href="predictor.html">predictor</a>
+
+        </div>
+        <label for="check">
+        <i class="fas fa-bars menu-btn"></i>
+        <i class="fas fa-times close-btn"></i>
+        </label>
+      </header>
+      <div class="content" style="margin-top: 8%;">
+        <div class="info">
+          <h2>FORECASTING RAINFALL <br><span>USING SUPERVISED TECHNIQUES </span>
+           </h2>
+          <p> "We planted our missile on the launchpad, aiming to pierce the sky—yet nature struck first. As rain poured down unexpectedly, the test was aborted. Perhaps it was the trees, guardians of the rain, reminding us that even in the age of missiles, it is still nature that sets the rules. Just as trees bring rain and cool the summer's fire, they quietly command moments when even steel must wait"</p>
+          <a href="#about" class="info-btn">More info</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About FOREST</h2>
+      <p class="about-content" style="text-align: center;">FOREST is a web app which has 
+      a Machine Learning model running at the back. The purpose of developing this app is to 
+      predict whether it will rain the next day or not. This model is based on the Rain Prediction
+      in Australia dataset. The codes for this project can be checked in my <a href="../static/weatherAUS.csv" download="weatherAUS.csv" style="color: black; font-weight: bold;"></a>. More than 80% of Australia has an annual rainfall of less than 
+      600 mm which is less among the all continents other than Antartica which recieves less 
+      rainfall. A place inland near Lake Eyre would only receive 81 mm of rain annually. The 
+      average annual rainfall in the Australian desert is low, ranging from 81 to 250 mm. 
+      Thunderstorms are relatively common in the region, with an annual average of 15 to 20 
+      thunderstorms. The southern parts of Australia get the usual westerly winds and 
+      rain-bearing cold fronts that come when high–pressure systems move towards northern 
+      Australia during winter. Cold snaps may bring frosts inland, though temperatures near the
+      coast are mild or near mild all year round. Summers in southern Australia are generally 
+      dry and hot with coastal sea breezes. During a lengthy dry spell, hot and dry winds from 
+      the interior can cause bushfires in some southern and eastern states, though most commonly
+      Victoria and New South Wales. The tropical areas of northern Australia have a wet summer 
+      because of the monsoon. During "the wet", typically October to April, humid north-westerly
+       winds bring showers and thunderstorms. Occasionally, tropical cyclones can bring heavy 
+       rainfall to tropical coastal regions, which is also likely to reach further inland. 
+      </p>
+    </section>
+
+     <section id="dashboard">
+      <h2>Dashboard</h2>
+      <p>This multi-variable weather graph displays key forecasts at a glance —Rainfall trends, wind speeds, and temperature advance.
+         Humidity and pressure lines help complete the scene,For a full weather picture, precise and keen.
+         Each curve tells a story of changes ahead,When clouds might gather or sunshine spread.Winds may shift and temperatures rise,
+         With pressure and moisture as silent guides.
+         Use this chart to track and prepare,
+         For sudden storms or calmer air.
+         From daily planning to broader review,
+         </p> 
+        <iframe src="http://127.0.0.1:5500/plot/index.html" frameborder="1" height="600" ></iframe>  
+  
+    </section>
+        
+         <section id="info">
+      <div>
+        <h2>Own Prediction</h2>
+        <p>Upload your Excel file. My model automatically trains using XGBoost and provides suggestions and predictions based on the data</p>
+
+          <iframe src="http://127.0.0.1:5500/auto2/auto2.html" frameborder="1" height="800" width="1500" ></iframe>
+          
+    </section>
+    <footer>
+      <p>
+        Developed with ❤️ by Ashish   </p> 
+    </footer>
+
+  </body>
+</html>

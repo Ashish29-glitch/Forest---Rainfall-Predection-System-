@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='after_rainy.css') }}">
+
+    <title>Rainy Day</title>
+</head>
+<body>
+    <h1 style="text-align: center; font-size: 3 rem; font-weight: bolder">RAINY DAY</h1>
+    <div class="rainyimg">
+        <img src="../static/rainy.jpg" alt="Vasanth" style="height: 550px; width: 550px; margin-left: 32%">
+    </div>
+    <div>
+        <h2 style="text-align: center;">
+         Tomorrow is going to be <span style="font-style: italic; font-weight: bold;">rainy day</span>. 
+         So enjoy yourselves with a cup of coffee and hot snack.
+        </h2>
+    </div>
+         <h2 style="text-align: center; font-style: italic; font-weight: bold;">Remember to wear a raincoat or carry a raincoat.</h2>
+         <h2 style="text-align: center; font-style: italic; font-weight: bold;">Have a great day!</h2>
+         <h2 style="text-align: center; font-style: italic; font-weight: bold;">Expected Rainfall Tomorrow: {{ rainfall }} mm</h2>
+   </div>
+</body>
+</html>
